@@ -1,4 +1,4 @@
-/* --- RESET & GLOBAL STYLE --- */
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +14,6 @@ body {
     overflow-x: hidden;
 }
 
-/* --- NAVIGASI --- */
 header { padding: 20px; }
 nav ul {
     display: flex;
@@ -36,7 +35,6 @@ nav ul li a.active, nav ul li a:hover {
     background: white; 
 }
 
-/* --- KONTENER UTAMA --- */
 .container {
     padding: 40px 20px;
     max-width: 800px;
@@ -52,7 +50,7 @@ nav ul li a.active, nav ul li a:hover {
     font-weight: bold;
 }
 
-/* --- HALAMAN HOME (HERO) --- */
+
 .hero {
     flex: 1;
     display: flex;
@@ -77,7 +75,7 @@ nav ul li a.active, nav ul li a:hover {
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     margin-bottom: 20px;
     object-fit: cover; 
-    object-position: top; /* Agar rambut tidak terpotong */
+    object-position: top; 
 }
 
 .hero h1 {
@@ -94,7 +92,6 @@ nav ul li a.active, nav ul li a:hover {
     opacity: 0.9;
 }
 
-/* --- LIST AKTIVITAS --- */
 .activity-list {
     text-align: left;
     color: black;
@@ -112,7 +109,6 @@ nav ul li a.active, nav ul li a:hover {
 }
 .clickable:hover { color: white; }
 
-/* --- PERBAIKAN MODAL POP-UP (AGAR DI TENGAH) --- */
 .modal {
     display: none; 
     position: fixed;
@@ -121,12 +117,11 @@ nav ul li a.active, nav ul li a:hover {
     width: 100%; height: 100%;
     background-color: rgba(0,0,0,0.85);
     
-    /* Gunakan flexbox untuk menengahkan konten */
+
     justify-content: center;
     align-items: center;
 }
 
-/* Memaksa display flex saat modal terbuka via JS */
 .modal[style*="display: block"] {
     display: flex !important;
 }
@@ -145,7 +140,7 @@ nav ul li a.active, nav ul li a:hover {
 
 .modal-img { 
     width: 100%; 
-    max-height: 70vh; /* Membatasi tinggi agar tidak kebablasan ke bawah */
+    max-height: 70vh; 
     object-fit: contain;
     border-radius: 10px; 
     margin-bottom: 15px;
@@ -160,7 +155,7 @@ nav ul li a.active, nav ul li a:hover {
 }
 
 .cert-link-btn {
-    display: none; /* Sembunyi jika tidak ada link */
+    display: none; 
     background-color: #1E90FF; color: white;
     text-decoration: none; padding: 12px 25px;
     border-radius: 30px; font-weight: bold;
@@ -168,7 +163,6 @@ nav ul li a.active, nav ul li a:hover {
 }
 .cert-link-btn:hover { background-color: #003366; transform: scale(1.05); }
 
-/* --- PROJECT PAGE STYLES --- */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -217,7 +211,7 @@ nav ul li a.active, nav ul li a:hover {
     justify-self: center;
 }
 
-/* --- SERTIFIKASI PAGE STYLES --- */
+
 .cert-grid {
     display: flex;
     justify-content: center;
@@ -256,7 +250,6 @@ nav ul li a.active, nav ul li a:hover {
     line-height: 1.4;
 }
 
-/* --- ANIMASI & RESPONSIVE --- */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
@@ -273,7 +266,6 @@ nav ul li a.active, nav ul li a:hover {
     .cert-grid { flex-direction: column; align-items: center; }
 }
 
-/* --- SOCIAL MEDIA LINKS --- */
 .social-links {
     margin-top: 20px;
     display: flex;
@@ -282,8 +274,8 @@ nav ul li a.active, nav ul li a:hover {
 }
 
 .social-links a {
-    color: white; /* Warna icon putih agar senada dengan teks */
-    font-size: 24px; /* Ukuran icon */
+    color: white; 
+    font-size: 24px;
     transition: 0.3s;
     text-decoration: none;
 }
