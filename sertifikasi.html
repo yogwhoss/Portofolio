@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sertifikasi | Yogi Permana Jati</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aktivitas.html">Aktivitas</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="sertifikasi.html" class="active">Sertifikasi</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">Sertifikasi</h1>
+        
+        <div class="cert-grid">
+            <div class="cert-card">
+                <div class="cert-img-container clickable" 
+                     data-img="foto/google.png" 
+                     data-title="Google Cloud Skill Badge" 
+                     data-desc="The Basics of Google Cloud Compute – Infrastructure Modernization (2026)."
+                     data-link="https://www.credly.com/badges/91f833bf-2caf-46bf-b6b0-34d2e26cc183/public_url">
+                    <img src="foto/google.png" alt="Google Cloud Certificate">
+                </div>
+                <p class="clickable" 
+                   data-img="foto/google.png" 
+                   data-title="Google Cloud Skill Badge" 
+                   data-desc="The Basics of Google Cloud Compute (2026)"
+                   data-link="https://www.credly.com/badges/91f833bf-2caf-46bf-b6b0-34d2e26cc183/public_url">
+                    <u>The Basics of Google Cloud Compute – Google Cloud (2026)</u>
+                </p>
+            </div>
+
+            <div class="cert-card">
+                <div class="cert-img-container clickable" 
+                     data-img="foto/dicoding.png" 
+                     data-title="Sertifikat Dicoding" 
+                     data-desc="Belajar Dasar AI – Dicoding Indonesia (2025)."
+                     data-link="https://www.dicoding.com/certificates/JMZVVD5RRZN9">
+                    <img src="foto/dicoding.png" alt="Dicoding Certificate">
+                </div>
+                <p class="clickable" 
+                   data-img="foto/dicoding.png" 
+                   data-title="Sertifikat Dicoding" 
+                   data-desc="Belajar Dasar AI (2025)"
+                   data-link="https://www.dicoding.com/certificates/JMZVVD5RRZN9">
+                    <u>Belajar Dasar AI – Dicoding Indonesia (2025)</u>
+                </p>
+            </div>
+        </div>
+
+        <div id="imageModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <img src="" id="modalImg" class="modal-img">
+                <h3 id="modalTitle" style="margin-top:15px;"></h3>
+                <p id="modalDesc" style="font-size: 0.9rem; color: #555; margin-top: 5px; margin-bottom: 20px;"></p>
+                <a href="#" id="modalLink" target="_blank" class="cert-link-btn">Lihat Sertifikat Asli</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="data.js"></script>
+</body>
+</html>

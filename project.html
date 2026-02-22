@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project | Yogi Permana Jati</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aktivitas.html">Aktivitas</a></li>
+                <li><a href="project.html" class="active">Project</a></li>
+                <li><a href="sertifikasi.html">Sertifikasi</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">Project</h1>
+        
+        <div class="project-grid">
+            <div class="project-card clickable" data-img="foto/sg.png" data-title="SG1 GDGOC" data-desc="Git 101 & Introduction to Javascript for Front-end untuk Study Group 1.">
+                <div class="project-placeholder">
+                    <img src="foto/sg1.png" alt="SG1">
+                </div>
+                <p>SG1 GDGOC TELKOM UNIVERSITY</p>
+            </div>
+
+            <div class="project-card clickable" data-img="foto/project2.png" data-title="SG2 GDGOC" data-desc="HTML & CSS Study Group 2.">
+                <div class="project-placeholder">
+                    <img src="foto/project2.png" alt="SG2">
+                </div>
+                <p>SG2 GDGOC TELKOM UNIVERSITY</p>
+            </div>
+
+            <div class="project-card clickable" data-img="foto/project1.png" data-title="SG3 GDGOC" data-desc="JavaScript DOM Manipulation Study Group 3.">
+                <div class="project-placeholder">
+                    <img src="foto/project3.png" alt="SG3">
+                </div>
+                <p>SG3 GDGOC TELKOM UNIVERSITY</p>
+            </div>
+
+            <div class="project-card clickable" data-img="foto/project3.png" data-title="SG4 GDGOC" data-desc="Introduction to ReactJS Study Group 4.">
+                <div class="project-placeholder">
+                    <img src="foto/project1.png" alt="SG4">
+                </div>
+                <p>SG4 GDGOC TELKOM UNIVERSITY</p>
+            </div>
+
+            <div class="project-card clickable" data-img="foto/project1.png" data-title="SG6 GDGOC" data-desc="ReactJS with Tailwind Study Group 6.">
+                <div class="project-placeholder">
+                    <img src="foto/project1.png" alt="SG6">
+                </div>
+                <p>SG6 GDGOC TELKOM UNIVERSITY</p>
+            </div>
+        </div>
+
+        <div id="imageModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <img src="" id="modalImg" class="modal-img">
+                <h3 id="modalTitle" style="margin-top:15px;"></h3>
+                <p id="modalDesc" style="font-size: 0.9rem; color: #555; margin-top: 5px;"></p>
+            </div>
+        </div>
+    </main>
+
+    <script src="data.js"></script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+/* --- RESET & GLOBAL STYLE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, #ADD8E6 0%, #1E90FF 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* --- NAVIGASI --- */
+header { padding: 20px; }
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 15px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: 1px solid black;
+    transition: 0.3s;
+    font-size: 14px;
+}
+nav ul li a.active, nav ul li a:hover { 
+    background: white; 
+}
+
+/* --- KONTENER UTAMA --- */
+.container {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.page-title { 
+    font-size: 2.5rem; 
+    margin-bottom: 20px; 
+    color: black; 
+    font-weight: bold;
+}
+
+/* --- HALAMAN HOME (HERO) --- */
+.hero {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1s ease-in;
+}
+
+.profile-img img {
+    width: 230px; 
+    height: 230px;
+    border-radius: 50%;
+    border: 6px solid white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+    object-fit: cover; 
+    object-position: top; /* Agar rambut tidak terpotong */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: white;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: white;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* --- LIST AKTIVITAS --- */
+.activity-list {
+    text-align: left;
+    color: black;
+    line-height: 1.8;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.clickable {
+    cursor: pointer;
+    color: #003366;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: 0.2s;
+}
+.clickable:hover { color: white; }
+
+/* --- PERBAIKAN MODAL POP-UP (AGAR DI TENGAH) --- */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.85);
+    
+    /* Gunakan flexbox untuk menengahkan konten */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Memaksa display flex saat modal terbuka via JS */
+.modal[style*="display: block"] {
+    display: flex !important;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 15px;
+    position: relative;
+    text-align: center;
+    color: black;
+    animation: zoomIn 0.3s ease-out;
+}
+
+.modal-img { 
+    width: 100%; 
+    max-height: 70vh; /* Membatasi tinggi agar tidak kebablasan ke bawah */
+    object-fit: contain;
+    border-radius: 10px; 
+    margin-bottom: 15px;
+}
+
+.close-btn { 
+    position: absolute; 
+    right: 15px; top: 5px; 
+    font-size: 35px; 
+    cursor: pointer; 
+    color: #333;
+}
+
+.cert-link-btn {
+    display: none; /* Sembunyi jika tidak ada link */
+    background-color: #1E90FF; color: white;
+    text-decoration: none; padding: 12px 25px;
+    border-radius: 30px; font-weight: bold;
+    margin-top: 15px; transition: 0.3s;
+}
+.cert-link-btn:hover { background-color: #003366; transform: scale(1.05); }
+
+/* --- PROJECT PAGE STYLES --- */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+    padding-bottom: 50px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.project-card:hover { transform: translateY(-5px); }
+
+.project-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #d9d9d9;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+}
+
+.project-card:last-child {
+    grid-column: span 2;
+    max-width: 50%;
+    justify-self: center;
+}
+
+/* --- SERTIFIKASI PAGE STYLES --- */
+.cert-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.cert-card {
+    width: 320px;
+    text-align: left;
+}
+
+.cert-img-container {
+    width: 100%;
+    background: white;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.cert-img-container:hover { transform: scale(1.05); }
+
+.cert-img-container img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+.cert-card p {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: black;
+    line-height: 1.4;
+}
+
+/* --- ANIMASI & RESPONSIVE --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 700px) {
+    .project-grid { grid-template-columns: 1fr; }
+    .project-card:last-child { grid-column: span 1; max-width: 100%; }
+    .cert-grid { flex-direction: column; align-items: center; }
+}
+
+/* --- SOCIAL MEDIA LINKS --- */
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.social-links a {
+    color: white; /* Warna icon putih agar senada dengan teks */
+    font-size: 24px; /* Ukuran icon */
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px); /* Efek melompat kecil saat di-hover */
+    color: #003366; /* Berubah warna jadi biru gelap saat disentuh */
+}
