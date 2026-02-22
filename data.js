@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
             modalDesc.innerText = this.getAttribute("data-desc") || "";
             
             
-            const linkUrl = this.getAttribute("data-link");
-            if (linkUrl && linkUrl !== "ISI_LINK_GOOGLE_CLOUD_DISINI" && linkUrl !== "ISI_LINK_DICODING_DISINI") {
+          const linkUrl = this.getAttribute("data-link");
+            if (linkUrl && linkUrl.trim() !== "" && linkUrl.startsWith("http")) {
                 modalLink.href = linkUrl;
                 modalLink.style.display = "inline-block";
             } else {
