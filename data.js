@@ -13,9 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
             modalTitle.innerText = this.getAttribute("data-title") || "";
             modalDesc.innerText = this.getAttribute("data-desc") || "";
             
-            // Logika Link Sertifikat
+            
             const linkUrl = this.getAttribute("data-link");
-            if (linkUrl && linkUrl !== "ISI_LINK_GOOGLE_CLOUD_DISINI" && linkUrl !== "ISI_LINK_DICODING_DISINI") {
+            if (linkUrl && linkUrl !== "https://www.credly.com/badges/91f833bf-2caf-46bf-b6b0-34d2e26cc183/public_url" && linkUrl !== "https://www.dicoding.com/certificates/JMZVVD5RRZN9") {
                 modalLink.href = linkUrl;
                 modalLink.style.display = "inline-block";
             } else {
