@@ -281,6 +281,5 @@ nav ul li a.active, nav ul li a:hover {
 }
 
 .social-links a:hover {
-    transform: translateY(-5px); /* Efek melompat kecil saat di-hover */
-    color: #003366; /* Berubah warna jadi biru gelap saat disentuh */
-}
+    transform: translateY(-5px); 
+    color: #003366; 
